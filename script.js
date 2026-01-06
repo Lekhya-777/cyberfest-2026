@@ -2,18 +2,20 @@
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navMenu.classList.toggle('active');
-});
-
-// Close mobile menu when clicking on a link
-document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
+if (hamburger && navMenu) {
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
     });
-});
+
+    // Close mobile menu when clicking on a link
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        });
+    });
+}
 
 // Smooth scrolling for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -40,11 +42,12 @@ let navLinks = document.querySelectorAll('.nav-link');
 window.addEventListener('scroll', () => {
     let current = '';
     
+    const scrollPosition = window.scrollY || window.pageYOffset;
+
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        
-        if(pageYOffset >= (sectionTop - 200)) {
+
+        if(scrollPosition >= (sectionTop - 200)) {
             current = section.getAttribute('id');
         }
     });
@@ -95,54 +98,44 @@ function typeTerminalEffect(element, text, speed = 50) {
     type();
 }
 
-// Initialize terminal effects
-document.addEventListener('DOMContentLoaded', () => {
-    const terminalLines = document.querySelectorAll('.terminal-line:not(.static)');
-    
-    terminalLines.forEach((line, index) => {
-        const text = line.textContent;
-        line.textContent = '';
-        
-        setTimeout(() => {
-            typeTerminalEffect(line, text, 30);
-        }, index * 500);
-    });
-});
-
 // Particle animation
 function createParticles() {
     const container = document.querySelector('.particles-container');
     if (!container) return;
-    
+
+    const fragment = document.createDocumentFragment();
+
     for (let i = 0; i < 20; i++) {
         const particle = document.createElement('div');
         particle.classList.add('particle');
-        
+
         // Random position
         const posX = Math.random() * 100;
         const posY = Math.random() * 100;
-        
+
         particle.style.left = `${posX}%`;
         particle.style.top = `${posY}%`;
-        
+
         // Random size
         const size = Math.random() * 3 + 1;
         particle.style.width = `${size}px`;
         particle.style.height = `${size}px`;
-        
+
         // Random color
-        const colors = ['#8b3dff', '#00c4cc', '#1962ff'];
+        const colors = ['var(--primary-purple)', 'var(--primary-teal)', 'var(--secondary-blue)'];
         const color = colors[Math.floor(Math.random() * colors.length)];
         particle.style.backgroundColor = color;
-        
+
         // Random animation
         const duration = Math.random() * 20 + 10;
         const delay = Math.random() * 5;
-        
+
         particle.style.animation = `float ${duration}s infinite linear ${delay}s`;
-        
-        container.appendChild(particle);
+
+        fragment.appendChild(particle);
     }
+
+    container.appendChild(fragment);
 }
 
 // Network animation
@@ -162,23 +155,6 @@ function animateNetwork() {
         }, index * 400);
     });
 }
-
-// Initialize animations
-document.addEventListener('DOMContentLoaded', () => {
-    createParticles();
-    animateNetwork();
-    
-    // Glitch effect enhancement
-    const glitchElements = document.querySelectorAll('.glitch');
-    glitchElements.forEach(el => {
-        setInterval(() => {
-            el.style.animation = 'none';
-            setTimeout(() => {
-                el.style.animation = 'glitch-anim 5s infinite';
-            }, 10);
-        }, 10000); // Random glitch every 10 seconds
-    });
-});
 
 // Form submission handling (if contact form is added later)
 document.addEventListener('DOMContentLoaded', () => {
@@ -209,48 +185,75 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Simulate form submission
                 const submitButton = form.querySelector('button[type="submit"]');
                 const originalText = submitButton.textContent;
-                
+
                 submitButton.textContent = 'Sending...';
                 submitButton.disabled = true;
-                
+
                 setTimeout(() => {
-                    alert('Thank you for your message! We will get back to you soon.');
+                    // Create a simple notification element
+                    const notification = document.createElement('div');
+                    notification.className = 'form-notification success';
+                    notification.textContent = 'Thank you for your message! We will get back to you soon.';
+                    notification.style.cssText = `
+                        position: fixed;
+                        top: 20px;
+                        right: 20px;
+                        background-color: #008008;
+                        color: white;
+                        padding: 15px 20px;
+                        border-radius: 5px;
+                        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+                        z-index: 10000;
+                        font-family: var(--font-secondary);
+                        max-width: 300px;
+                        word-wrap: break-word;
+                    `;
+                    document.body.appendChild(notification);
+
+                    // Remove notification after 5 seconds
+                    setTimeout(() => {
+                        if (notification.parentNode) {
+                            notification.parentNode.removeChild(notification);
+                        }
+                    }, 5000);
+
                     form.reset();
                     submitButton.textContent = originalText;
                     submitButton.disabled = false;
                 }, 1500);
             } else {
-                alert('Please fill in all required fields.');
+                // Create an error notification
+                const notification = document.createElement('div');
+                notification.className = 'form-notification error';
+                notification.textContent = 'Please fill in all required fields.';
+                notification.style.cssText = `
+                    position: fixed;
+                    top: 20px;
+                    right: 20px;
+                    background-color: #db142c;
+                    color: white;
+                    padding: 15px 20px;
+                    border-radius: 5px;
+                    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+                    z-index: 10000;
+                    font-family: var(--font-secondary);
+                    max-width: 300px;
+                    word-wrap: break-word;
+                `;
+                document.body.appendChild(notification);
+
+                // Remove notification after 5 seconds
+                setTimeout(() => {
+                    if (notification.parentNode) {
+                        notification.parentNode.removeChild(notification);
+                    }
+                }, 5000);
             }
         });
     });
 });
 
-// Removed parallax/tilting effect for hero section
-// The original code that caused tilting has been removed:
-/*
-document.addEventListener('DOMContentLoaded', () => {
-    const hero = document.querySelector('.hero');
-    
-    if(hero) {
-        window.addEventListener('mousemove', (e) => {
-            const xAxis = (window.innerWidth / 2 - e.pageX) / 25;
-            const yAxis = (window.innerHeight / 2 - e.pageY) / 25;
-            
-            hero.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
-        });
-        
-        window.addEventListener('mouseleave', () => {
-            hero.style.transition = 'transform 0.5s ease';
-            hero.style.transform = 'rotateY(0deg) rotateX(0deg)';
-            
-            setTimeout(() => {
-                hero.style.transition = 'none';
-            }, 500);
-        });
-    }
-});
-*/
+// The original code that caused tilting has been removed.
 
 // Scroll animations for additional elements
 const scrollAnimations = () => {
@@ -266,20 +269,6 @@ const scrollAnimations = () => {
         }
     });
 };
-
-// Set initial styles for scroll animations
-document.addEventListener('DOMContentLoaded', () => {
-    const elements = document.querySelectorAll('.section-header h2, .section-header p');
-    
-    elements.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    });
-    
-    window.addEventListener('scroll', scrollAnimations);
-    scrollAnimations(); // Initial check
-});
 
 // Enhanced terminal effect
 function enhanceTerminal() {
@@ -298,11 +287,8 @@ function enhanceTerminal() {
     });
 }
 
-document.addEventListener('DOMContentLoaded', enhanceTerminal);
-
 // Add dynamic background effect
 function createDynamicBackground() {
-    const body = document.body;
     const background = document.createElement('div');
     background.className = 'dynamic-bg';
     background.style.position = 'fixed';
@@ -314,26 +300,87 @@ function createDynamicBackground() {
     background.style.background = 'radial-gradient(circle at center, rgba(139, 61, 255, 0.05) 0%, transparent 70%)';
     background.style.pointerEvents = 'none';
     background.style.opacity = '0';
-    
+
     document.body.appendChild(background);
-    
-    // Animate the background
+
+    // Animate the background using requestAnimationFrame for better performance
     let opacity = 0.05;
     let direction = 1;
-    
-    setInterval(() => {
-        opacity += 0.005 * direction;
-        
-        if (opacity > 0.1) {
-            direction = -1;
-            opacity = 0.1;
-        } else if (opacity < 0.03) {
-            direction = 1;
-            opacity = 0.03;
+    let lastTime = 0;
+    const animationSpeed = 100; // milliseconds between updates
+
+    function animate(currentTime) {
+        if (currentTime - lastTime >= animationSpeed) {
+            opacity += 0.005 * direction;
+
+            if (opacity > 0.1) {
+                direction = -1;
+                opacity = 0.1;
+            } else if (opacity < 0.03) {
+                direction = 1;
+                opacity = 0.03;
+            }
+
+            background.style.opacity = opacity;
+            lastTime = currentTime;
         }
-        
-        background.style.opacity = opacity;
-    }, 100);
+
+        requestAnimationFrame(animate);
+    }
+
+    requestAnimationFrame(animate);
 }
 
-document.addEventListener('DOMContentLoaded', createDynamicBackground);
+// Single DOMContentLoaded listener for all initialization
+document.addEventListener('DOMContentLoaded', () => {
+    // Initialize terminal effects
+    const terminalLines = document.querySelectorAll('.terminal-line:not(.static)');
+
+    terminalLines.forEach((line, index) => {
+        const text = line.textContent;
+        line.textContent = '';
+
+        setTimeout(() => {
+            typeTerminalEffect(line, text, 30);
+        }, index * 500);
+    });
+
+    // Initialize animations
+    createParticles();
+    animateNetwork();
+
+    // Glitch effect enhancement
+    const glitchElements = document.querySelectorAll('.glitch');
+    glitchElements.forEach(el => {
+        // Clear any existing interval to prevent memory leaks
+        if (el.glitchInterval) {
+            clearInterval(el.glitchInterval);
+        }
+
+        el.glitchInterval = setInterval(() => {
+            el.style.animation = 'none';
+            setTimeout(() => {
+                el.style.animation = 'glitch-anim 5s infinite';
+            }, 10);
+        }, 10000); // Random glitch every 10 seconds
+    });
+
+    // Set initial styles for scroll animations
+    const elements = document.querySelectorAll('.section-header h2, .section-header p');
+
+    elements.forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    });
+
+    window.addEventListener('scroll', scrollAnimations);
+    scrollAnimations(); // Initial check
+
+    // Enhanced terminal effect
+    enhanceTerminal();
+
+    // Add dynamic background effect
+    createDynamicBackground();
+});
+

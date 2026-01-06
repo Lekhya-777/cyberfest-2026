@@ -26,11 +26,11 @@
                 <a href="#about" class="nav-link">About</a>
                 <a href="#contact" class="nav-link">Contact</a>
             </div>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+            <button class="hamburger" type="button" aria-label="Toggle navigation menu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </button>
         </div>
     </nav>
 
@@ -247,6 +247,53 @@
         </div>
     </section>
 
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contact Us</h2>
+                <p>Get in touch with the Digital Defence Club team</p>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Reach Out to Us</h3>
+                    <p>Have questions about CyberFest 2026? Need technical support or more information about our events? Our team is here to help!</p>
+
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <h4>Email</h4>
+                            <p>contact@digitaldefenceclub.edu.in</p>
+                        </div>
+                        <div class="contact-item">
+                            <h4>Phone</h4>
+                            <p>+91 98765 43210</p>
+                        </div>
+                        <div class="contact-item">
+                            <h4>College</h4>
+                            <p>Chaitanya Bharathi Institute Of Technology</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -278,10 +325,10 @@
                     <h4>Contact Us</h4>
                     <p>contact@digitaldefenceclub.edu.in</p>
                     <div class="social-links">
-                        <a href="#"><span class="social-icon">f</span></a>
-                        <a href="#"><span class="social-icon">t</span></a>
-                        <a href="#"><span class="social-icon">in</span></a>
-                        <a href="#"><span class="social-icon">ig</span></a>
+                        <a href="https://facebook.com/digitaldefenceclub" target="_blank" aria-label="Facebook"><span class="social-icon">f</span></a>
+                        <a href="https://twitter.com/digitaldefenceclub" target="_blank" aria-label="Twitter"><span class="social-icon">t</span></a>
+                        <a href="https://linkedin.com/company/digitaldefenceclub" target="_blank" aria-label="LinkedIn"><span class="social-icon">in</span></a>
+                        <a href="https://instagram.com/digitaldefenceclub" target="_blank" aria-label="Instagram"><span class="social-icon">ig</span></a>
                     </div>
                 </div>
             </div>

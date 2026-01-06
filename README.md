@@ -31,13 +31,13 @@ The website incorporates the Digital Defence Club branding with:
 - Real-world cybersecurity challenges
 - Expert mentors and guidance
 - Networking opportunities
-- Prizes worth $50,000
+- Prizes worth ₹5,00,000
 
 ### CTF (Capture The Flag)
 - Multiple challenge categories
 - Jeopardy-style competition
 - Various difficulty levels
-- Prizes worth $25,000
+- Prizes worth ₹2,50,000
 
 ## How to Use
 

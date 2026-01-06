@@ -110,10 +110,12 @@ body {
 
 @keyframes subtlePulse {
   0% {
-    filter: blur(2px) brightness(1.1) contrast(1.2) opacity(0.22);
+    filter: blur(2px) brightness(1.1) contrast(1.2);
+    opacity: 0.22;
   }
   100% {
-    filter: blur(2px) brightness(1.2) contrast(1.3) opacity(0.30);
+    filter: blur(2px) brightness(1.2) contrast(1.3);
+    opacity: 0.30;
   }
 }
 
@@ -859,6 +861,87 @@ a:hover {
 .about-section {
   background-color: var(--bg-darker);
   background: linear-gradient(135deg, rgba(13, 18, 22, 0.9) 0%, rgba(0, 0, 0, 0.9) 100%);
+}
+
+/* Contact Section */
+.contact-section {
+  background-color: var(--bg-dark);
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.9) 0%, rgba(13, 18, 22, 0.9) 100%);
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.contact-info h3 {
+  color: var(--text-purple); /* Changed to match logo purple */
+  margin-bottom: 1.5rem;
+  font-size: var(--font-size-2xl);
+}
+
+.contact-details {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.contact-item {
+  background-color: var(--bg-card);
+  padding: 1.5rem;
+  border-radius: var(--border-radius-lg);
+  border: 1px solid rgba(139, 61, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(139, 61, 255, 0.4);
+}
+
+.contact-item h4 {
+  color: var(--text-teal); /* Changed to match logo teal */
+  margin-bottom: 0.5rem;
+  font-size: var(--font-size-base);
+}
+
+.contact-form {
+  background-color: var(--bg-card);
+  padding: 2rem;
+  border-radius: var(--border-radius-lg);
+  border: 1px solid rgba(139, 61, 255, 0.2);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: var(--bg-terminal);
+  border: 1px solid rgba(139, 61, 255, 0.3);
+  border-radius: var(--border-radius-md);
+  color: var(--text-light);
+  font-family: var(--font-secondary);
+  font-size: var(--font-size-base);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-purple);
+  box-shadow: 0 0 10px rgba(139, 61, 255, 0.3);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
 }
 
 .about-content {
