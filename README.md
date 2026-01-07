@@ -1,44 +1,129 @@
-# CyberFest 2026 - Digital Defence Club
+# CyberFest 2K26 - Official Website
 
-Welcome to CyberFest 2026, the premier cybersecurity event organized by the Digital Defence Club. This website showcases our upcoming Hackathon and CTF competitions.
+A National-Level Cybersecurity Conclave website for CyberFest 2K26, hosted at CBIT, Hyderabad, and organized by Digital Defence Club (DDC).
 
-## Features
+## 🎯 Event Overview
 
-- Modern, responsive design with cybersecurity theme
-- Dedicated sections for Hackathon and CTF events
-- Smooth navigation between sections
-- Mobile-friendly layout
-- Interactive elements and animations
-- Digital Defence Club branding throughout
+- **Event:** CyberFest 2K26 - National Cybersecurity Conclave
+- **Dates:** 30th & 31st January 2026
+- **Venue:** Chaitanya Bharathi Institute of Technology (CBIT), Hyderabad
+- **Duration:** 24-36 Hours Continuous Event
+- **Organized By:** Digital Defence Club (DDC), CBIT
 
-## Structure
+## ✨ Features Implemented
 
-- `index.html` - Main website structure
-- `styles.css` - Styling with theme colors from Digital Defence Club
-- `script.js` - Interactive functionality
+### Website Sections
+- **Hero Section** - Animated landing with event logo, date, and CTAs
+- **About Section** - Event overview with statistics
+- **Event Details** - Structured information cards
+- **Hackathon Track** - AI in Cybersecurity & Blockchain Security themes
+- **CTF Track** - Capture The Flag challenges with terminal-style UI
+- **Expert Sessions** - Panel talks and judging panel information
+- **Schedule** - Day-wise timeline for both days
+- **Venue** - Location details with embedded Google Map
+- **Sponsors** - Tiered sponsor/partner showcase
+- **Footer** - Contact info, social links, and credits
 
-## Design Elements
+### Design Elements
+- Dark cyber/hacker aesthetic theme
+- Neon cyan and matrix green accents
+- Animated matrix rain background
+- Cyber grid patterns and hexagon overlays
+- Glitch effects and scan line animations
+- Floating and pulsing glow effects
+- 3D card hover transformations
+- Terminal-style code blocks
+- Responsive design for all devices
 
-The website incorporates the Digital Defence Club branding with:
-- Purple (#8b3dff) and teal (#00c4cc) theme colors
-- Cybersecurity-inspired visual elements
-- The club's logo throughout the site
-- Dark theme for a modern, tech-focused look
+## 🛠 Tech Stack
 
-## Events
+### Frontend Framework
+- **React 18** - UI library
+- **TypeScript** - Type-safe JavaScript
+- **Vite** - Fast build tool and dev server
 
-### Hackathon
-- Real-world cybersecurity challenges
-- Expert mentors and guidance
-- Networking opportunities
-- Prizes worth ₹5,00,000
+### Styling & UI
+- **Tailwind CSS** - Utility-first CSS framework
+- **Shadcn/UI** - Customizable component library
+- **Framer Motion** - Animation library
+- **Lucide React** - Icon library
 
-### CTF (Capture The Flag)
-- Multiple challenge categories
-- Jeopardy-style competition
-- Various difficulty levels
-- Prizes worth ₹2,50,000
+### Typography
+- **Orbitron** - Futuristic display font (headings)
+- **Rajdhani** - Clean sans-serif (body text)
+- **Share Tech Mono** - Monospace (terminal/code)
 
-## How to Use
+### Additional Libraries
+- **TanStack React Query** - Data fetching
+- **React Router DOM** - Client-side routing
+- **Class Variance Authority** - Component variants
+- **Tailwind Merge** - Class merging utility
 
-Simply open `index.html` in any modern web browser to view the website. The site is fully responsive and will work on desktop, tablet, and mobile devices.
+## 🎨 Design System
+
+### Color Palette
+- **Background:** Deep Navy (#050816)
+- **Primary:** Electric Cyan (#00f0ff)
+- **Secondary:** Matrix Green (#00ff41)
+- **Accent:** Bright Blue (#3d8bff)
+- **Text:** Light blue/white variants
+
+### Custom CSS Effects
+- `.cyber-grid` - Animated grid background
+- `.text-glow` - Neon text glow effect
+- `.neon-border` - Glowing border effect
+- `.cyber-card` - Glassmorphism card style
+- `.glitch` - Glitch animation
+- `.scan-lines` - CRT scan line overlay
+- `.terminal-cursor` - Blinking cursor
+- `.float` - Floating animation
+- `.pulse-glow` - Pulsing glow effect
+- `.gradient-text` - Gradient text fill
+
+## 📁 Project Structure
+
+```
+src/
+├── assets/              # Logo images
+├── components/
+│   ├── ui/              # Shadcn components
+│   ├── Navbar.tsx
+│   ├── HeroSection.tsx
+│   ├── AboutSection.tsx
+│   ├── EventDetailsSection.tsx
+│   ├── HackathonSection.tsx
+│   ├── CTFSection.tsx
+│   ├── ExpertSessionsSection.tsx
+│   ├── ScheduleSection.tsx
+│   ├── VenueSection.tsx
+│   ├── SponsorsSection.tsx
+│   ├── Footer.tsx
+│   └── CyberBackground.tsx
+├── pages/
+│   └── Index.tsx
+├── index.css            # Design system & custom styles
+└── App.tsx              # Root component
+```
+
+## 🚀 Getting Started
+
+```bash
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+
+# Build for production
+npm run build
+```
+
+## 👩‍💻 Developer Credits
+
+**Developed by:** Dhana Sri Soli  
+**Department:** Information Technology  
+**Roll Number:** 1601-24-737-027
+
+---
+
+© 2026 CyberFest 2K26 | Digital Defence Club, CBIT
