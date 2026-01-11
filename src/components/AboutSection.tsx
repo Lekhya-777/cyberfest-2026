@@ -26,7 +26,7 @@ const AboutSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="font-orbitron text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+          <h2 className="font-orbitron text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 px-4">
             <span className="gradient-text">About The Event</span>
           </h2>
           <div className="w-32 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto" />
@@ -41,16 +41,16 @@ const AboutSection = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="space-y-6"
           >
-            <div className="cyber-card rounded-xl p-8">
-              <h3 className="font-orbitron text-2xl font-bold text-primary mb-4">
+            <div className="cyber-card rounded-xl p-6 md:p-8">
+              <h3 className="font-orbitron text-xl md:text-2xl font-bold text-primary mb-4">
                 CYBERFEST 2026
               </h3>
-              <p className="font-rajdhani text-lg text-foreground/80 leading-relaxed mb-4">
+              <p className="font-rajdhani text-base md:text-lg text-foreground/80 leading-relaxed mb-4">
                 Powered by <span className="text-secondary font-semibold">Digital Defence Club (DDC)</span>, 
                 CyberFest 2026 is a premier national-level cybersecurity conclave bringing together 
                 the brightest minds in cybersecurity from across India.
               </p>
-              <p className="font-rajdhani text-lg text-foreground/80 leading-relaxed">
+              <p className="font-rajdhani text-base md:text-lg text-foreground/80 leading-relaxed">
                 Experience an intense 36 hour continuous event featuring parallel tracks of
                 <span className="text-primary font-semibold"> Hackathon</span> and 
                 <span className="text-secondary font-semibold"> Capture The Flag (CTF)</span> challenges, 
@@ -58,9 +58,9 @@ const AboutSection = () => {
               </p>
             </div>
 
-            <div className="cyber-card rounded-lg p-4 text-center max-w-md mx-auto">
-              <span className="font-mono-tech text-sm text-primary">Organized By</span>
-              <p className="font-orbitron font-bold mt-1">Digital Defence Club (DDC), CBIT</p>
+            <div className="cyber-card rounded-lg p-4 text-center max-w-md mx-4 md:mx-auto">
+              <span className="font-mono-tech text-xs md:text-sm text-primary">Organized By</span>
+              <p className="font-orbitron text-sm md:text-base font-bold mt-1">Digital Defence Club (DDC), CBIT</p>
             </div>
           </motion.div>
 
@@ -80,7 +80,7 @@ const AboutSection = () => {
                 className="cyber-card card-3d rounded-xl p-6 text-center group"
               >
                 <stat.icon className={`w-10 h-10 ${stat.color} mx-auto mb-4 icon-hover transition-transform`} />
-                <div className={`font-orbitron text-3xl md:text-4xl font-bold ${stat.color} mb-2`}>
+                <div className={`font-orbitron text-2xl sm:text-3xl md:text-4xl font-bold ${stat.color} mb-2`}>
                   {stat.value}
                 </div>
                 <p className="font-rajdhani text-sm text-foreground/60 uppercase tracking-wider">

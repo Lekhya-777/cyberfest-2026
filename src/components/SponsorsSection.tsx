@@ -64,7 +64,7 @@ const SponsorsSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="font-orbitron text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+          <h2 className="font-orbitron text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 px-4">
             <span className="gradient-text">Sponsors & Partners</span>
           </h2>
           <div className="w-32 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto mb-6" />
@@ -93,10 +93,10 @@ const SponsorsSection = () => {
               </div>
 
               {/* Sponsors Grid */}
-              <div className={`grid gap-6 ${
+              <div className={`grid gap-4 md:gap-6 ${
                 tier.sponsors.length === 1 ? 'grid-cols-1 max-w-md mx-auto' :
                 tier.sponsors.length === 2 ? 'grid-cols-2 max-w-2xl mx-auto' :
-                tier.sponsors.length === 3 ? 'grid-cols-3 max-w-4xl mx-auto' :
+                tier.sponsors.length === 3 ? 'grid-cols-1 sm:grid-cols-3 max-w-4xl mx-auto' :
                 'grid-cols-2 md:grid-cols-4'
               }`}>
                 {tier.sponsors.map((sponsor, index) => (

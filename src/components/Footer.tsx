@@ -19,22 +19,19 @@ const Footer = () => {
       <div className="container mx-auto px-4 relative z-10">
         {/* Main Footer Content */}
         <div className="grid md:grid-cols-3 gap-12 mb-12">
-          {/* Logo & About */}
-          <div className="space-y-6">
+            <div className="space-y-6">
             <div className="flex items-center gap-3">
-              <Shield className="w-10 h-10 text-primary" />
-              <span className="font-orbitron text-xl font-bold gradient-text">CYBERFEST 2K26</span>
+              <Shield className="w-8 h-8 md:w-10 md:h-10 text-primary" />
+              <span className="font-orbitron text-lg md:text-xl font-bold gradient-text">CYBERFEST 2K26</span>
             </div>
-            <p className="font-rajdhani text-foreground/70 leading-relaxed">
+            <p className="font-rajdhani text-base text-foreground/70 leading-relaxed">
               A National-Level Cybersecurity Conclave bringing together hackers, researchers, and industry experts.
             </p>
             <div className="flex items-center gap-4">
-              <img src={cbitLogo} alt="CBIT" className="h-12 object-contain" />
-              <img src={ddcLogo} alt="DDC" className="h-12 object-contain rounded-lg" />
+              <img src={cbitLogo} alt="CBIT" className="h-10 md:h-12 object-contain" />
+              <img src={ddcLogo} alt="DDC" className="h-10 md:h-12 object-contain rounded-lg" />
             </div>
-          </div>
-
-          {/* Quick Links */}
+          </div>     {/* Quick Links */}
           <div>
             <h4 className="font-orbitron text-lg font-bold mb-6 text-primary">Quick Links</h4>
             <ul className="space-y-3">
@@ -68,23 +65,20 @@ const Footer = () => {
                 ddc@cbit.ac.in
               </a>
 
-              {/* DDC Team Contacts */}
-              <div className="space-y-2 pt-2">
-                <div className="font-rajdhani text-sm text-foreground/80">
+              {/* DDC Team               <div className="space-y-3 pt-2">
+                <div className="font-rajdhani text-sm text-foreground/80 flex flex-col">
                   <span className="font-semibold">Pradeep (DDC President):</span>
-                  <a href="tel:+918184889557" className="ml-2 text-primary hover:text-secondary transition-colors">+91 81848 89557</a>
+                  <a href="tel:+918184889557" className="text-primary hover:text-secondary transition-colors">+91 81848 89557</a>
                 </div>
-                <div className="font-rajdhani text-sm text-foreground/80">
+                <div className="font-rajdhani text-sm text-foreground/80 flex flex-col">
                   <span className="font-semibold">Vasanthadithya (DDC Vice-President):</span>
-                  <a href="tel:+916305262894" className="ml-2 text-primary hover:text-secondary transition-colors">+91 6305262894</a>
+                  <a href="tel:+916305262894" className="text-primary hover:text-secondary transition-colors">+91 6305262894</a>
                 </div>
-                <div className="font-rajdhani text-sm text-foreground/80">
+                <div className="font-rajdhani text-sm text-foreground/80 flex flex-col">
                   <span className="font-semibold">Sai Madhav (DDC EB Head):</span>
-                  <a href="tel:+918309435613" className="ml-2 text-primary hover:text-secondary transition-colors">+91 83094 35613</a>
+                  <a href="tel:+918309435613" className="text-primary hover:text-secondary transition-colors">+91 83094 35613</a>
                 </div>
-              </div>
-
-              {/* Social Links */}
+              </div> Links */}
               <div className="flex items-center gap-4 pt-4">
                 {socialLinks.map((social) => (
                   <motion.a

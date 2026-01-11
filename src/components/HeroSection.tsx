@@ -39,7 +39,7 @@ const HeroSection = () => {
             <img 
               src={cyberfestLogo} 
               alt="CyberFest 2K26" 
-              className="w-full max-w-2xl md:max-w-3xl mx-auto drop-shadow-[0_0_30px_rgba(0,240,255,0.5)]"
+              className="w-[90%] md:w-full max-w-2xl md:max-w-3xl mx-auto drop-shadow-[0_0_30px_rgba(0,240,255,0.5)] object-contain"
             />
           </motion.div>
 
@@ -48,16 +48,16 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex flex-wrap items-center justify-center gap-6 md:gap-10 mb-8"
+            className="flex flex-wrap items-center justify-center gap-4 md:gap-10 mb-8 px-2"
           >
-            <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10">
-              <img src={cbitLogo} alt="CBIT Logo" className="h-10 md:h-14 object-contain" />
+            <div className="flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10">
+              <img src={cbitLogo} alt="CBIT Logo" className="h-8 md:h-14 object-contain" />
             </div>
-            <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-white/90 backdrop-blur-sm border border-white/10">
-              <img src={iicLogo} alt="IIC Logo" className="h-10 md:h-14 object-contain" />
+            <div className="flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-lg bg-white/90 backdrop-blur-sm border border-white/10">
+              <img src={iicLogo} alt="IIC Logo" className="h-8 md:h-14 object-contain" />
             </div>
-            <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10">
-              <img src={ddcLogo} alt="DDC Logo" className="h-10 md:h-14 object-contain" />
+            <div className="flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10">
+              <img src={ddcLogo} alt="DDC Logo" className="h-8 md:h-14 object-contain" />
             </div>
           </motion.div>
 
@@ -67,7 +67,7 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
           >
-            <h1 className="font-orbitron text-2xl md:text-4xl lg:text-5xl font-bold mb-4 text-glow">
+            <h1 className="font-orbitron text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold mb-4 text-glow px-4">
               A National-Level Cybersecurity Conclave
             </h1>
           </motion.div>
@@ -77,7 +77,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.7 }}
-            className="font-mono-tech text-base md:text-lg text-primary mb-8 tracking-wider"
+            className="font-mono-tech text-sm sm:text-base md:text-lg text-primary mb-8 tracking-wider px-4"
           >
             Hackathon | Capture The Flag | Panel Talks | Workshops | Startup Expo
           </motion.p>

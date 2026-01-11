@@ -72,17 +72,25 @@ const IntroVideo = ({ videoSrc, onVideoEnd }: IntroVideoProps) => {
   return (
     <>
       <div
-        className={`fixed inset-0 z-[100] transition-opacity duration-500 ${showVideo ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+        className={`fixed inset-0 z-[100] transition-opacity duration-500 overflow-hidden ${showVideo ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
       >
-        <video
-          ref={videoRef}
-          src={videoSrc}
-          autoPlay
-          muted
-          playsInline
-          loop={false}
-          className="w-full h-full object-cover"
-        />
+        {/* Mobile-optimized video container */}
+        <div className="w-full h-full flex items-center justify-center bg-black">
+          <video
+            ref={videoRef}
+            src={videoSrc}
+            autoPlay
+            muted
+            playsInline
+            loop={false}
+            className="w-full h-full object-contain sm:object-cover"
+            style={{
+              maxWidth: '100vw',
+              maxHeight: '100vh',
+              display: 'block',
+            }}
+          />
+        </div>
       </div>
       <canvas
         ref={canvasRef}

@@ -26,7 +26,7 @@ const VenueSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="font-orbitron text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+          <h2 className="font-orbitron text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 px-4">
             <span className="gradient-text">Venue</span>
           </h2>
           <div className="w-32 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto mb-6" />
@@ -41,16 +41,16 @@ const VenueSection = () => {
             className="space-y-6"
           >
             {/* Main Venue Card */}
-            <div className="cyber-card rounded-2xl p-8 neon-border">
-              <div className="flex items-start gap-4 mb-6">
-                <div className="p-4 rounded-xl bg-primary/10 border border-primary/30">
-                  <MapPin className="w-8 h-8 text-primary icon-hover" />
+            <div className="cyber-card rounded-2xl p-6 md:p-8 neon-border">
+              <div className="flex flex-col sm:flex-row items-start gap-4 mb-6">
+                <div className="p-3 md:p-4 rounded-xl bg-primary/10 border border-primary/30">
+                  <MapPin className="w-6 h-6 md:w-8 md:h-8 text-primary icon-hover" />
                 </div>
                 <div>
-                  <h3 className="font-orbitron text-2xl font-bold mb-2">
+                  <h3 className="font-orbitron text-xl md:text-2xl font-bold mb-2">
                     Chaitanya Bharathi Institute of Technology
                   </h3>
-                  <p className="font-rajdhani text-lg text-foreground/70">
+                  <p className="font-rajdhani text-base md:text-lg text-foreground/70">
                     Gandipet, Hyderabad, Telangana 500075
                   </p>
                 </div>
@@ -94,8 +94,6 @@ const VenueSection = () => {
               referrerPolicy="no-referrer-when-downgrade"
               title="CBIT Location"
             />
-
-
           </motion.div>
         </div>
       </div>

@@ -39,7 +39,7 @@ const CTFSection = () => {
           <div className="inline-block mb-4 px-4 py-2 rounded-full border border-secondary/30 bg-secondary/10">
             <span className="font-mono-tech text-sm text-secondary uppercase tracking-wider">Track 2</span>
           </div>
-          <HackingSimulator text="Capture The Flag" className="font-orbitron text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+          <HackingSimulator text="Capture The Flag" className="font-orbitron text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 px-4">
             <span className="gradient-text-green">Capture The Flag</span>
           </HackingSimulator>
           <div className="w-32 h-1 bg-gradient-to-r from-transparent via-secondary to-transparent mx-auto mb-6" />
@@ -62,7 +62,7 @@ const CTFSection = () => {
             </div>
             
             {/* Terminal Content */}
-            <div className="p-6 font-mono-tech text-sm">
+            <div className="p-4 md:p-6 font-mono-tech text-xs md:text-sm">
               <HackingSimulator text="$ cat /challenges/themes.txt" className="text-secondary mb-2">
                 <p className="text-secondary mb-2">$ cat /challenges/themes.txt</p>
               </HackingSimulator>
@@ -105,13 +105,13 @@ const CTFSection = () => {
             {[1, 2, 3].map((rank) => (
               <div
                 key={rank}
-                className="flex items-center justify-between p-3 rounded-lg bg-muted/30 border border-secondary/10"
+                className="flex flex-col sm:flex-row items-center justify-between p-3 rounded-lg bg-muted/30 border border-secondary/10 gap-2"
               >
                 <div className="flex items-center gap-3">
                   <span className={`font-orbitron font-bold ${rank === 1 ? 'text-yellow-500' : rank === 2 ? 'text-gray-400' : 'text-amber-600'}`}>
                     #{rank}
                   </span>
-                  <span className="font-mono-tech text-foreground/70">Team_{rank}_Placeholder</span>
+                  <span className="font-mono-tech text-sm md:text-base text-foreground/70">Team_{rank}_Placeholder</span>
                 </div>
                 <span className="font-orbitron text-secondary">{1500 - (rank - 1) * 200} pts</span>
               </div>

@@ -26,11 +26,11 @@ const EventDetailsSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="font-orbitron text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+          <h2 className="font-orbitron text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 px-4">
             <span className="gradient-text">Event Details</span>
           </h2>
           <div className="w-32 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto mb-6" />
-          <p className="font-rajdhani text-lg text-foreground/70 max-w-2xl mx-auto">
+          <p className="font-rajdhani text-base md:text-lg text-foreground/70 max-w-2xl mx-auto px-4">
             Everything you need to know about CyberFest 2K26
           </p>
         </motion.div>
@@ -54,18 +54,7 @@ const EventDetailsSection = () => {
                     {detail.label}
                   </span>
                   <p className="font-rajdhani text-lg font-semibold text-foreground mt-1">
-                    {detail.link ? (
-                      <a
-                        href={detail.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="hover:text-primary transition-colors duration-200 underline decoration-dashed underline-offset-4"
-                      >
-                        {detail.value}
-                      </a>
-                    ) : (
-                      detail.value
-                    )}
+                    {detail.value}
                   </p>
                 </div>
               </div>
@@ -90,18 +79,18 @@ const EventDetailsSection = () => {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="mt-12 cyber-card rounded-2xl p-8 max-w-4xl mx-auto text-center"
         >
-          <h3 className="font-orbitron text-xl md:text-2xl font-bold mb-4 text-primary">
+          <h3 className="font-orbitron text-lg md:text-2xl font-bold mb-4 text-primary">
             Parallel Tracks Running Simultaneously
           </h3>
           <div className="flex flex-col md:flex-row items-center justify-center gap-8">
             <div className="flex items-center gap-3">
-              <div className="w-4 h-4 rounded-full bg-primary animate-pulse" />
-              <span className="font-rajdhani text-xl font-semibold">Hackathon</span>
+              <div className="w-3 h-3 md:w-4 md:h-4 rounded-full bg-primary animate-pulse" />
+              <span className="font-rajdhani text-lg md:text-xl font-semibold">Hackathon</span>
             </div>
             <div className="hidden md:block text-4xl text-muted-foreground">&</div>
             <div className="flex items-center gap-3">
-              <div className="w-4 h-4 rounded-full bg-secondary animate-pulse" />
-              <span className="font-rajdhani text-xl font-semibold">Capture The Flag (CTF)</span>
+              <div className="w-3 h-3 md:w-4 md:h-4 rounded-full bg-secondary animate-pulse" />
+              <span className="font-rajdhani text-lg md:text-xl font-semibold">Capture The Flag (CTF)</span>
             </div>
           </div>
         </motion.div>

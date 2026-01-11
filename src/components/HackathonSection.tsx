@@ -57,7 +57,7 @@ const HackathonSection = () => {
           <div className="inline-block mb-4 px-4 py-2 rounded-full border border-primary/30 bg-primary/10">
             <span className="font-mono-tech text-sm text-primary uppercase tracking-wider">Track 1</span>
           </div>
-          <h2 className="font-orbitron text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+          <h2 className="font-orbitron text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 px-4">
             <span className="gradient-text">Hackathon</span>
           </h2>
           <div className="w-32 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto mb-6" />
@@ -73,7 +73,7 @@ const HackathonSection = () => {
           <h3 className="font-orbitron text-xl md:text-2xl font-bold mb-2 text-foreground">
             Theme
           </h3>
-          <p className="font-orbitron text-2xl md:text-3xl font-bold gradient-text">
+          <p className="font-orbitron text-lg sm:text-2xl md:text-3xl font-bold gradient-text px-2">
             AI in Cybersecurity & Blockchain Security
           </p>
         </motion.div>
