@@ -16,7 +16,7 @@ const scrollToSchedule = () => {
 
 const HeroSection = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="home" className="relative min-h-[100svh] flex items-center justify-center overflow-hidden py-10 sm:py-12 md:py-16">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 cyber-grid hex-pattern" />
       
@@ -25,18 +25,18 @@ const HeroSection = () => {
       <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-accent/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="flex flex-col items-center text-center bg-black/30 backdrop-blur-sm border border-white/10 rounded-3xl p-8 md:p-12 shadow-2xl">
+        <div className="relative -translate-y-4 sm:-translate-y-6 md:-translate-y-10 flex flex-col items-center text-center bg-black/30 backdrop-blur-sm border border-white/10 rounded-3xl p-6 sm:p-8 md:p-10 shadow-2xl max-w-5xl mx-auto">
           {/* Main Logo */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
-            className="mb-6"
+            className="mb-4 sm:mb-5"
           >
             <img 
               src={cyberfestLogo} 
               alt="CyberFest 2K26" 
-              className="w-[90%] md:w-full max-w-2xl md:max-w-3xl mx-auto drop-shadow-[0_0_30px_rgba(0,240,255,0.5)] object-contain"
+              className="w-full max-w-xl sm:max-w-xl md:max-w-xl mx-auto drop-shadow-[0_0_30px_rgba(0,240,255,0.5)] object-contain"
             />
           </motion.div>
 
@@ -45,16 +45,16 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex flex-wrap items-center justify-center gap-4 md:gap-10 mb-8 px-2"
+            className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 md:gap-8 mb-5 sm:mb-6 px-2"
           >
             <div className="flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10">
-              <img src={cbitLogo} alt="CBIT Logo" className="h-8 md:h-14 object-contain" />
+              <img src={cbitLogo} alt="CBIT Logo" className="h-7 sm:h-9 md:h-12 object-contain" />
             </div>
             <div className="flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-lg bg-white/90 backdrop-blur-sm border border-white/10">
-              <img src={iicLogo} alt="IIC Logo" className="h-8 md:h-14 object-contain" />
+              <img src={iicLogo} alt="IIC Logo" className="h-7 sm:h-9 md:h-12 object-contain" />
             </div>
             <div className="flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10">
-              <img src={ddcLogo} alt="DDC Logo" className="h-8 md:h-14 object-contain" />
+              <img src={ddcLogo} alt="DDC Logo" className="h-7 sm:h-9 md:h-12 object-contain" />
             </div>
           </motion.div>
 
@@ -64,7 +64,7 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
           >
-            <h1 className="font-orbitron text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold mb-4 text-glow px-4">
+            <h1 className="font-orbitron text-lg sm:text-xl md:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 text-glow px-3 sm:px-4">
               A National-Level Cybersecurity Conclave
             </h1>
           </motion.div>
@@ -74,7 +74,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.7 }}
-            className="font-mono-tech text-sm sm:text-base md:text-lg text-primary mb-8 tracking-wider px-4"
+            className="font-mono-tech text-xs sm:text-sm md:text-base text-primary mb-5 sm:mb-6 tracking-wider px-3 sm:px-4"
           >
             Hackathon | Capture The Flag | Panel Talks | Workshops | Startup Expo
           </motion.p>
@@ -84,16 +84,16 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.9 }}
-            className="flex flex-col md:flex-row items-center gap-4 md:gap-8 mb-6"
+            className="flex flex-col md:flex-row items-center gap-3 md:gap-8 mb-4 sm:mb-5"
           >
             <div className="flex items-center gap-2 text-foreground/80">
               <Calendar className="w-5 h-5 text-primary" />
-              <span className="font-rajdhani text-lg font-semibold">6th & 7th February 2026</span>
+              <span className="font-rajdhani text-base sm:text-lg font-semibold">6th & 7th February 2026</span>
             </div>
             <div className="hidden md:block w-px h-6 bg-primary/30" />
             <div className="flex items-center gap-2 text-foreground/80">
               <MapPin className="w-5 h-5 text-secondary" />
-              <span className="font-rajdhani text-lg font-semibold">CBIT, Hyderabad</span>
+              <span className="font-rajdhani text-base sm:text-lg font-semibold">CBIT, Hyderabad</span>
             </div>
           </motion.div>
 
@@ -102,7 +102,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.0 }}
-            className="mb-6"
+            className="mb-4 sm:mb-5"
           >
             <DataFlowLine className="mx-auto" />
           </motion.div>
@@ -112,7 +112,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.1 }}
-            className="flex flex-col sm:flex-row gap-4"
+            className="flex flex-col sm:flex-row gap-3 sm:gap-4"
           >
             <Button variant="cyber" size="xl" className="pulse-glow">
               Register Now
@@ -127,7 +127,7 @@ const HeroSection = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.5 }}
-            className="absolute bottom-8 left-1/2 -translate-x-1/2"
+            className="hidden md:block absolute bottom-6 left-1/2 -translate-x-1/2"
           >
             <motion.div
               animate={{ y: [0, 10, 0] }}
